@@ -6,10 +6,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def do():
-    f = open('index.html', 'r')
-    return f.read()
+    return render_template('index.html')
 
 @app.route('/sss')
 def dos():
-    f = open('sss.html', 'r')
-    return f.read()
+    return render_template('sss.html')
