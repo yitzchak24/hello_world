@@ -4,14 +4,12 @@ from flask import render_template, request
 
 app = Flask(__name__)
 
-def loadPage(url):
-    f = open(url, 'r')
-    return f.read()
-
 @app.route('/')
 def do():
-    loadPage('index.txt')
+    f = open('index.html', 'r')
+    return f.read()
 
 @app.route('/sss')
 def dos():
-    loadPage('sss.html')
+    f = open('sss.html', 'r')
+    return f.read()
